@@ -12,6 +12,28 @@
 <script>
 var module = document.getElementById('module')
 // do something ...
+
+var arr = []
+var length = 20
+for (var i = 0; i < length; i++) {
+  arr.push(Math.floor(Math.random() * length))
+}
+
+console.log('arr built')
+
+var heap = new DataStructure.MinHeap()
+
+// console.time('heap-sort')
+// console.log(heap.sort(arr))
+// console.timeEnd('heap-sort')
+//
+// console.time('native-sort')
+// console.log(arr.sort((a, b) => a - b))
+// console.timeEnd('native-sort')
+
+console.time('quick-sort')
+console.log(DataStructure.quickSort(arr))
+console.timeEnd('quick-sort')
 </script>
 </body>
 </html>

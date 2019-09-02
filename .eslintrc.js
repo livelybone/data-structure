@@ -14,6 +14,9 @@ module.exports = {
   ],
   'rules': {
     "no-undef": "off",
+    "class-methods-use-this": "off",
+    "no-cond-assign": "off",
+    "import/prefer-default-export": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     'prettier/prettier': 'error',
   },

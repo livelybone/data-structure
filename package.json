@@ -88,5 +88,8 @@
       "prettier --write",
       "git update-index --again"
     ]
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.5"
   }
 }

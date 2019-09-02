@@ -28,8 +28,12 @@ export default {
       ],
       plugins:
         process.env.NODE_ENV === 'test'
-          ? ['@babel/plugin-transform-runtime', 'istanbul']
-          : [],
+          ? [
+              '@babel/plugin-transform-runtime',
+              '@babel/plugin-proposal-class-properties',
+              'istanbul',
+            ]
+          : ['@babel/plugin-proposal-class-properties'],
     }),
   ],
 }
