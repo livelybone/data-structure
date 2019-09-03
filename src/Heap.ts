@@ -62,6 +62,8 @@ export class MinHeap<T = number> {
         this.heap[index] = this.extract(leftIndex)
       } else {
         this.heap[index] = this.extract(rightIndex)
+        // } else {
+        //   this.heap[index] =
       }
     } else if (leftIndex) {
       this.heap[index] = this.extract(leftIndex)
@@ -79,7 +81,8 @@ export class MinHeap<T = number> {
   }
 
   sort(arr: T[]) {
-    arr.forEach(val => this.insert(val))
+    this.buildWithArray(arr)
+    console.log('heap', this.heap)
     return arr.reduce((ar: T[]) => {
       ar.push(this.extract())
       return ar
