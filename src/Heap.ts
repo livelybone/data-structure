@@ -62,8 +62,6 @@ export class MinHeap<T = number> {
         this.heap[index] = this.extract(leftIndex)
       } else {
         this.heap[index] = this.extract(rightIndex)
-        // } else {
-        //   this.heap[index] =
       }
     } else if (leftIndex) {
       this.heap[index] = this.extract(leftIndex)
